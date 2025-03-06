@@ -82,15 +82,15 @@
     </div>
 
     <!-- Oversampling Pipeline Section -->
-    <h2 class="section-title">Oversampling Pipeline (oversampling_pipeline.sv)</h2>
+    <h2 class="section-title">Oversampling Pipeline</h2>
     <div class="project-description">
         One of my primary responsibilities was designing an oversampler to transition signals from a 250 kHz input to a 16 MHz binary output, a critical step for the DAC’s performance. I developed the <span class="highlight">oversampling_pipeline.sv</span> module to handle this clock domain crossing efficiently. Initially, the 16-bit multiplication and division operations caused resource bottlenecks. To address this, I implemented a <span class="highlight">pipelining strategy</span>, delaying the response by one clock cycle but significantly reducing resource usage. This optimization improved the DAC’s throughput and demonstrated my ability to balance trade-offs in real-time systems.
     </div>
 
     <!-- Delta Sigma Modulation Section -->
-    <h2 class="section-title">Delta Sigma Modulation (delta_sigma_single.sv)</h2>
+    <h2 class="section-title">Delta Sigma Modulation</h2>
     <div class="project-description">
-        Another key contribution was implementing <span class="highlight">Delta Sigma Modulation</span> in the <span class="highlight">delta_sigma_single.sv</span> file. This module converted a 16-bit digital input into a high-frequency pulse density of 1s and 0s, achieving an analog output with precision down to 1/(2^16) between 0 and 3.3 volts. Mastering this complex signal processing technique required deep dives into modulation theory and SystemVerilog, showcasing my ability to learn and apply advanced concepts to meet stringent accuracy requirements.
+        Another key contribution was implementing <span class="highlight">Delta Sigma Modulation</span> in the <span class="highlight">delta_sigma_single.sv</span> file. This module converted a 16-bit digital input into a high-frequency pulse density output of 1s and 0s, achieving an analog output (THanks to our hardware team!) with precision down to 1/(2^16) between -3.3 and 3.3 volts. Mastering this complex signal processing technique required deep dives into modulation theory and SystemVerilog, showcasing my ability to learn and apply advanced concepts to meet stringent accuracy requirements.
     </div>
 
     <!-- NDA Notice -->
