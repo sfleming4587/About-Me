@@ -2,14 +2,17 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>Projects</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Projects - Software Optimization for a 16-bit DAC</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
-            background-color: #1e3a5f;
+            background-color: #1e3a5f; /* Dark blue background */
+            color: #ffffff; /* White text for contrast */
         }
 
         .nav-bar {
@@ -19,52 +22,50 @@
             .nav-bar a {
                 margin: 0 15px;
                 text-decoration: none;
-                color: #FFFFFF;
+                color: #ffffff;
                 font-size: 18px;
             }
 
                 .nav-bar a:hover {
-                    color: #0078d4;
+                    color: #66b3ff; /* Lighter blue on hover */
                 }
 
-        h1 {
+        .project-title {
             font-size: 48px;
-            color: #FFFFFF;
+            color: #ffffff;
             margin-bottom: 20px;
         }
 
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
+        .section-title {
+            font-size: 28px;
+            color: #66b3ff; /* Lighter blue for section headers */
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
 
-        .example1 {
-            font-family: 'Georgia', serif;
-            font-size: 20px;
-            line-height: 1.5;
-            color: #FFFFFF;
-        }
-
-        .example2 {
-            font-family: 'Courier New', monospace;
+        .project-description {
             font-size: 18px;
-            font-weight: bold;
-            color: #2a2a2a;
-            background-color: #e0e0e0;
-            padding: 10px;
-            border-radius: 5px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6; /* Improved readability */
         }
 
-        .example3 {
-            font-family: 'Verdana', sans-serif;
+        .highlight {
+            background-color: #2a4d7a; /* Slightly lighter blue for emphasis */
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .nda-notice {
             font-size: 16px;
-            font-style: italic;
-            color: #0066cc;
-            text-align: left;
+            color: #cccccc; /* Grayish for less emphasis */
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Links -->
     <div class="nav-bar">
         <a href="index.html">About</a>
         <a href="game.html">Game</a>
@@ -72,17 +73,29 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <h1>Projects</h1>
-    <div class="content">
-        <p class="example1">
-            Here�s a showcase of my work. I�ve built games, apps, and more, blending creativity with technical skill. Edit this to list your projects!
-        </p>
-        <p class="example2">
-            Project Highlights: Kitchen Chaos, a Unity game; a weather app in Python; and a portfolio site (this one!). Add your own here.
-        </p>
-        <p class="example3">
-            I love experimenting with new tech. This section could detail your favorite tools or frameworks�go wild with it!
-        </p>
+    <!-- Project Title -->
+    <h1 class="project-title">Software Optimization for a 16-bit DAC</h1>
+
+    <!-- Project Overview -->
+    <div class="project-description">
+        As part of a year-long senior design project sponsored by <span class="highlight">Fieldline Medical</span>, I served as the <span class="highlight">Software Lead</span> on a team tasked with designing a 16-bit Digital-to-Analog Converter (DAC) from scratch. With no prior experience, I self-taught <span class="highlight">SystemVerilog</span>, FPGA development, and Quartus Prime in a short timeframe, delivering a high-performance solution under tight constraints. Below are key highlights of my contributions, showcasing my skills in optimization, signal processing, and hardware-software integration.
+    </div>
+
+    <!-- Oversampling Pipeline Section -->
+    <h2 class="section-title">Oversampling Pipeline (oversampling_pipeline.sv)</h2>
+    <div class="project-description">
+        One of my primary responsibilities was designing an oversampler to transition signals from a 250 kHz input to a 16 MHz binary output, a critical step for the DAC’s performance. I developed the <span class="highlight">oversampling_pipeline.sv</span> module to handle this clock domain crossing efficiently. Initially, the 16-bit multiplication and division operations caused resource bottlenecks. To address this, I implemented a <span class="highlight">pipelining strategy</span>, delaying the response by one clock cycle but significantly reducing resource usage. This optimization improved the DAC’s throughput and demonstrated my ability to balance trade-offs in real-time systems.
+    </div>
+
+    <!-- Delta Sigma Modulation Section -->
+    <h2 class="section-title">Delta Sigma Modulation (delta_sigma_single.sv)</h2>
+    <div class="project-description">
+        Another key contribution was implementing <span class="highlight">Delta Sigma Modulation</span> in the <span class="highlight">delta_sigma_single.sv</span> file. This module converted a 16-bit digital input into a high-frequency pulse density of 1s and 0s, achieving an analog output with precision down to 1/(2^16) between 0 and 3.3 volts. Mastering this complex signal processing technique required deep dives into modulation theory and SystemVerilog, showcasing my ability to learn and apply advanced concepts to meet stringent accuracy requirements.
+    </div>
+
+    <!-- NDA Notice -->
+    <div class="nda-notice">
+        Note: Due to an NDA with Fieldline Medical, I cannot share the source code. However, I’m happy to discuss my approach and technical decisions in detail during an interview!
     </div>
 </body>
 </html>
