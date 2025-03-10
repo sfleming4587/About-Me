@@ -58,15 +58,24 @@
             display: inline-block;
         }
 
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
         #unity-container {
             width: 960px;
             height: 540px;
             margin: 30px auto 20px;
             background-color: #1e3a5f; /* Match body background */
+            position: relative;
+            z-index: 0;
         }
 
         #unity-canvas {
             background-color: #1e3a5f; /* Ensure canvas matches */
+            width: 100% !important;
+            height: 100% !important;
         }
 
         .linkedin-notice {
@@ -88,18 +97,26 @@
     <!-- Project Title -->
     <h1 class="project-title">Kitchen Chaos</h1>
 
-    <!-- Project Overview -->
-    <div class="project-description">
-        Welcome to Kitchen Chaos, a fast-paced cooking simulation game built using the <span class="highlight">Unity engine</span> and hosted via WebGL on GitHub. This project is a direct implementation of a detailed tutorial by <span class="highlight">Code Monkey</span> on YouTube, undertaken to expand my software development skills and enhance my resume for a career in the field. Below, I outline key lessons learned during this process, showcasing my ability to quickly adapt to new technologies like Unity and <span class="highlight">C#</span>.
-    </div>
+    <!-- Content Wrapper to Ensure Text Stays Above Game -->
+    <div class="content-wrapper">
+        <!-- Project Overview -->
+        <div class="project-description">
+            Welcome to Kitchen Chaos, a fast-paced cooking simulation game built using the <span class="highlight">Unity engine</span> and hosted via WebGL on GitHub. This project is a direct implementation of a detailed tutorial by <span class="highlight">Code Monkey</span> on YouTube, undertaken to expand my software development skills and enhance my resume for a career in the field. Below, I outline key lessons learned during this process, showcasing my ability to quickly adapt to new technologies like Unity and <span class="highlight">C#</span>.
+        </div>
 
-    <!-- Learning Section -->
-    <h2 class="section-title">What I Learned</h2>
-    <div class="project-description">
-        This project is not an original creation but a faithful execution of Code Monkey’s comprehensive Unity tutorial, designed to broaden my technical expertise. Through this experience, I gained practical proficiency with the <span class="highlight">Unity game engine</span>, mastering its scene management and component-based architecture to craft an interactive game environment. A significant achievement was implementing <span class="highlight">animations</span> using Unity’s Animator components and state machines, ensuring fluid character movements and responsive gameplay. Additionally, I explored <span class="highlight">C# delegates</span>, leveraging them to create modular event-handling systems that enhanced the game’s logic efficiency. This process demonstrated my ability to rapidly learn and apply complex tools, a vital skill for software development.
-    </div>
-    <div class="project-description">
-        Beyond the technical aspects, completing Kitchen Chaos deepened my understanding of <span class="highlight">WebGL deployment</span>, as I successfully exported the game to run seamlessly on a GitHub-hosted site. Working with <span class="highlight">C#</span> also reinforced my grasp of object-oriented programming, particularly in managing game states and player interactions. By following this tutorial, I not only built a functional game but also showcased my capacity to absorb advanced concepts—like Unity’s physics engine and scripting API—in a short timeframe. This project underscores my commitment to continuous learning and adaptability, qualities I aim to bring to a professional software development role.
+        <!-- Learning Section -->
+        <h2 class="section-title">What I Learned</h2>
+        <div class="project-description">
+            This project is not an original creation but a faithful execution of Code Monkey’s comprehensive Unity tutorial, designed to broaden my technical expertise. Through this experience, I gained practical proficiency with the <span class="highlight">Unity game engine</span>, mastering its scene management and component-based architecture to craft an interactive game environment. A significant achievement was implementing <span class="highlight">animations</span> using Unity’s Animator components and state machines, ensuring fluid character movements and responsive gameplay. Additionally, I explored <span class="highlight">C# delegates</span>, leveraging them to create modular event-handling systems that enhanced the game’s logic efficiency. This process demonstrated my ability to rapidly learn and apply complex tools, a vital skill for software development.
+        </div>
+        <div class="project-description">
+            Beyond the technical aspects, completing Kitchen Chaos deepened my understanding of <span class="highlight">WebGL deployment</span>, as I successfully exported the game to run seamlessly on a GitHub-hosted site. Working with <span class="highlight">C#</span> also reinforced my grasp of object-oriented programming, particularly in managing game states and player interactions. By following this tutorial, I not only built a functional game but also showcased my capacity to absorb advanced concepts—like Unity’s physics engine and scripting API—in a short timeframe. This project underscores my commitment to continuous learning and adaptability, qualities I aim to bring to a professional software development role.
+        </div>
+
+        <!-- LinkedIn Notice -->
+        <div class="linkedin-notice">
+            Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank" style="color: #66b3ff; text-decoration: none;">LinkedIn</a> to discuss this project further or explore my full profile!
+        </div>
     </div>
 
     <!-- Unity WebGL Container -->
@@ -117,11 +134,6 @@
             <div id="unity-fullscreen-button"></div>
             <div id="unity-build-title">KitchenChaos</div>
         </div>
-    </div>
-
-    <!-- LinkedIn Notice -->
-    <div class="linkedin-notice">
-        Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank" style="color: #66b3ff; text-decoration: none;">LinkedIn</a> to discuss this project further or explore my full profile!
     </div>
 
     <!-- Unity WebGL Script -->
