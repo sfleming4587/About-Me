@@ -61,17 +61,16 @@
         .content-wrapper {
             width: 100%;
             max-width: 800px;
-            margin: 0 auto;
-            display: block; /* Ensure it takes full width and stacks vertically */
+            margin: 30px auto 20px;
+            display: block; /* Ensure it stacks vertically */
         }
 
         #unity-container {
             width: 960px;
             height: 540px;
-            margin: 30px auto 20px;
+            margin: 0 auto 30px;
             background-color: #1e3a5f; /* Match body background */
             display: block; /* Ensure it stacks vertically */
-            clear: both; /* Prevent floating issues */
         }
 
         #unity-canvas {
@@ -99,7 +98,24 @@
     <!-- Project Title -->
     <h1 class="project-title">Kitchen Chaos</h1>
 
-    <!-- Content Wrapper to Ensure Text Stays Above Game -->
+    <!-- Unity WebGL Container (Placed Above Text) -->
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+        </div>
+        <div id="unity-warning"></div>
+        <div id="unity-footer">
+            <div id="unity-webgl-logo"></div>
+            <div id="unity-fullscreen-button"></div>
+            <div id="unity-build-title">KitchenChaos</div>
+        </div>
+    </div>
+
+    <!-- Content Wrapper to Hold Text Below Game -->
     <div class="content-wrapper">
         <!-- Project Overview -->
         <div class="project-description">
@@ -118,23 +134,6 @@
         <!-- LinkedIn Notice -->
         <div class="linkedin-notice">
             Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank" style="color: #66b3ff; text-decoration: none;">LinkedIn</a> to discuss this project further or explore my full profile!
-        </div>
-    </div>
-
-    <!-- Unity WebGL Container -->
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
-        </div>
-        <div id="unity-warning"></div>
-        <div id="unity-footer">
-            <div id="unity-webgl-logo"></div>
-            <div id="unity-fullscreen-button"></div>
-            <div id="unity-build-title">KitchenChaos</div>
         </div>
     </div>
 
