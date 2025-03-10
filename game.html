@@ -37,35 +37,6 @@
             margin-bottom: 20px;
         }
 
-        .section-title {
-            font-size: 28px;
-            color: #66b3ff; /* Lighter blue for section headers */
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-
-        .project-description {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 20px;
-            line-height: 1.6; /* Improved readability */
-        }
-
-        .highlight {
-            background-color: #2a4d7a; /* Slightly lighter blue for emphasis */
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .content-wrapper {
-            width: 100%;
-            max-width: 800px;
-            margin: 30px auto 20px;
-            display: block; /* Ensure it stacks vertically */
-        }
-
-        /* New Unity Container */
         .unity-container-wrapper {
             width: 100%;
             max-width: 960px; /* Match Unity canvas width */
@@ -87,12 +58,6 @@
             width: 100% !important;
             height: 100% !important;
         }
-
-        .linkedin-notice {
-            font-size: 16px;
-            color: #cccccc; /* Grayish for less emphasis */
-            margin-top: 30px;
-        }
     </style>
 </head>
 <body>
@@ -107,29 +72,7 @@
     <!-- Project Title -->
     <h1 class="project-title">Kitchen Chaos</h1>
 
-    <!-- Content Wrapper to Hold Text Above Game -->
-    <div class="content-wrapper">
-        <!-- Project Overview -->
-        <div class="project-description">
-            Welcome to Kitchen Chaos, a fast-paced cooking simulation game built using the <span class="highlight">Unity engine</span> and hosted via WebGL on GitHub. This project is a direct implementation of a detailed tutorial by <span class="highlight">Code Monkey</span> on YouTube, undertaken to expand my software development skills and enhance my resume for a career in the field. Below, I outline key lessons learned during this process, showcasing my ability to quickly adapt to new technologies like Unity and <span class="highlight">C#</span>.
-        </div>
-
-        <!-- Learning Section -->
-        <h2 class="section-title">What I Learned</h2>
-        <div class="project-description">
-            This project is not an original creation but a faithful execution of Code Monkey’s comprehensive Unity tutorial, designed to broaden my technical expertise. Through this experience, I gained practical proficiency with the <span class="highlight">Unity game engine</span>, mastering its scene management and component-based architecture to craft an interactive game environment. A significant achievement was implementing <span class="highlight">animations</span> using Unity’s Animator components and state machines, ensuring fluid character movements and responsive gameplay. Additionally, I explored <span class="highlight">C# delegates</span>, leveraging them to create modular event-handling systems that enhanced the game’s logic efficiency. This process demonstrated my ability to rapidly learn and apply complex tools, a vital skill for software development.
-        </div>
-        <div class="project-description">
-            Beyond the technical aspects, completing Kitchen Chaos deepened my understanding of <span class="highlight">WebGL deployment</span>, as I successfully exported the game to run seamlessly on a GitHub-hosted site. Working with <span class="highlight">C#</span> also reinforced my grasp of object-oriented programming, particularly in managing game states and player interactions. By following this tutorial, I not only built a functional game but also showcased my capacity to absorb advanced concepts—like Unity’s physics engine and scripting API—in a short timeframe. This project underscores my commitment to continuous learning and adaptability, qualities I aim to bring to a professional software development role.
-        </div>
-
-        <!-- LinkedIn Notice -->
-        <div class="linkedin-notice">
-            Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank" style="color: #66b3ff; text-decoration: none;">LinkedIn</a> to discuss this project further or explore my full profile!
-        </div>
-    </div>
-
-    <!-- Unity WebGL Container (Moved Below Text) -->
+    <!-- Unity WebGL Container -->
     <div class="unity-container-wrapper">
         <div id="unity-container" class="unity-desktop">
             <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
