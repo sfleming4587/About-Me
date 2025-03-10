@@ -59,8 +59,10 @@
         }
 
         .content-wrapper {
-            position: relative;
-            z-index: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block; /* Ensure it takes full width and stacks vertically */
         }
 
         #unity-container {
@@ -68,8 +70,8 @@
             height: 540px;
             margin: 30px auto 20px;
             background-color: #1e3a5f; /* Match body background */
-            position: relative;
-            z-index: 0;
+            display: block; /* Ensure it stacks vertically */
+            clear: both; /* Prevent floating issues */
         }
 
         #unity-canvas {
