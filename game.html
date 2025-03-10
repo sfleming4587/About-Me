@@ -65,12 +65,21 @@
             display: block; /* Ensure it stacks vertically */
         }
 
+        /* New Unity Container */
+        .unity-container-wrapper {
+            width: 100%;
+            max-width: 960px; /* Match Unity canvas width */
+            margin: 0 auto 30px; /* Center the container */
+            background-color: #1e3a5f; /* Match body background */
+            display: flex;
+            justify-content: center; /* Center the Unity canvas horizontally */
+            align-items: center; /* Center the Unity canvas vertically */
+        }
+
         #unity-container {
             width: 960px;
             height: 540px;
-            margin: 0 auto 30px;
             background-color: #1e3a5f; /* Match body background */
-            display: block; /* Ensure it stacks vertically */
         }
 
         #unity-canvas {
@@ -121,19 +130,21 @@
     </div>
 
     <!-- Unity WebGL Container (Moved Below Text) -->
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
+    <div class="unity-container-wrapper">
+        <div id="unity-container" class="unity-desktop">
+            <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
+            <div id="unity-loading-bar">
+                <div id="unity-logo"></div>
+                <div id="unity-progress-bar-empty">
+                    <div id="unity-progress-bar-full"></div>
+                </div>
             </div>
-        </div>
-        <div id="unity-warning"></div>
-        <div id="unity-footer">
-            <div id="unity-webgl-logo"></div>
-            <div id="unity-fullscreen-button"></div>
-            <div id="unity-build-title">KitchenChaos</div>
+            <div id="unity-warning"></div>
+            <div id="unity-footer">
+                <div id="unity-webgl-logo"></div>
+                <div id="unity-fullscreen-button"></div>
+                <div id="unity-build-title">KitchenChaos</div>
+            </div>
         </div>
     </div>
 
