@@ -3,98 +3,75 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Kitchen Chaos</title>
+    <title>Projects - Kitchen Chaos</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
     <style>
         body {
-            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 40px;
-            background-color: #f4f6f9;
-            color: #333;
+            padding: 20px;
+            background-color: #1e3a5f; /* Dark blue background */
+            color: #ffffff; /* White text for contrast */
         }
 
         .nav-bar {
-            margin-bottom: 30px;
-            background-color: #1e3a5f;
-            padding: 15px;
-            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
             .nav-bar a {
-                margin: 0 20px;
+                margin: 0 15px;
                 text-decoration: none;
                 color: #ffffff;
                 font-size: 18px;
-                font-weight: 500;
             }
 
                 .nav-bar a:hover {
-                    color: #00aaff;
-                    transition: color 0.3s ease;
+                    color: #66b3ff; /* Lighter blue on hover */
                 }
 
-        .game-title {
-            font-size: 42px;
-            color: #1e3a5f;
-            margin-bottom: 15px;
-            font-weight: 700;
+        .project-title {
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 20px;
         }
 
-        .game-description {
+        .section-title {
+            font-size: 28px;
+            color: #66b3ff; /* Lighter blue for section headers */
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
             font-size: 18px;
-            max-width: 900px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6; /* Improved readability */
         }
 
-        .learning-section {
-            max-width: 900px;
-            margin: 0 auto 40px;
-            text-align: left;
-            font-size: 16px;
-            line-height: 1.8;
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .highlight {
+            background-color: #2a4d7a; /* Slightly lighter blue for emphasis */
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
         }
-
-            .learning-section h2 {
-                font-size: 24px;
-                color: #1e3a5f;
-                margin-bottom: 15px;
-            }
-
-        .linkedin-btn {
-            margin-top: 20px;
-        }
-
-            .linkedin-btn img {
-                width: 50px;
-                height: auto;
-                border: none;
-                transition: transform 0.3s ease;
-            }
-
-                .linkedin-btn img:hover {
-                    transform: scale(1.1);
-                }
 
         #unity-container {
             width: 960px;
             height: 540px;
             margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #1e3a5f; /* Match body background */
         }
 
         #unity-canvas {
-            background-color: #ffffff;
+            background-color: #1e3a5f; /* Ensure canvas matches */
+        }
+
+        .linkedin-notice {
+            font-size: 16px;
+            color: #cccccc; /* Grayish for less emphasis */
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -107,14 +84,24 @@
         <a href="contact.html">Contact Me</a>
     </div>
 
-    <!-- Title and Description -->
-    <h1 class="game-title">Kitchen Chaos</h1>
-    <p class="game-description">
-        Welcome to Kitchen Chaos, a fast-paced cooking simulation game developed using Unity and hosted via WebGL. This project is a demonstration of my ability to quickly learn and apply new skills in software development, based on a detailed tutorial by Code Monkey on YouTube.
-    </p>
+    <!-- Project Title -->
+    <h1 class="project-title">Kitchen Chaos</h1>
+
+    <!-- Project Overview -->
+    <div class="project-description">
+        Welcome to Kitchen Chaos, a fast-paced cooking simulation game built using the <span class="highlight">Unity engine</span> and hosted via WebGL on GitHub. This project is a direct implementation of a detailed tutorial by <span class="highlight">Code Monkey</span> on YouTube, undertaken to expand my software development skills and enhance my resume for a career in the field. Below, I outline key lessons learned during this process, showcasing my ability to quickly adapt to new technologies like Unity and <span class="highlight">C#</span>.
+    </div>
 
     <!-- Learning Section -->
-    <div class="learning-section">
-        <h2>What I Learned</h2>
-        <p>
-            This project, Kitchen Chaos, is not an original work but rather an implementation of a comprehensive tutorial by Code Monkey, which I followed to enhance my skills as part of my software development job search. Through this process, I gained hands-on experience with the Unity game engine and C# programming language, two powerful tools in modern game development. I learned to leverage Unity’s robust features, such as its scene management and component-based architecture, to build an interactive game environment. A key takeaway was mastering animations within Unity—using Animator components and state machines to bring characters and objects to life, ensuring smooth transitions and responsive gameplay. Additionally, I explored C# delegates, a concept that allowed me to implement flexible event-handling systems, making the game logic more modular and efficient. This experience underscored my ability to quickly adapt to new technologies and apply them effectively, a critical skill in
+    <h2 class="section-title">What I Learned</h2>
+    <div class="project-description">
+        This project is not an original creation but a faithful execution of Code Monkey’s comprehensive Unity tutorial, designed to broaden my technical expertise. Through this experience, I gained practical proficiency with the <span class="highlight">Unity game engine</span>, mastering its scene management and component-based architecture to craft an interactive game environment. A significant achievement was implementing <span class="highlight">animations</span> using Unity’s Animator components and state machines, ensuring fluid character movements and responsive gameplay. Additionally, I explored <span class="highlight">C# delegates</span>, leveraging them to create modular event-handling systems that enhanced the game’s logic efficiency. This process demonstrated my ability to rapidly learn and apply complex tools, a vital skill for software development.
+    </div>
+    <div class="project-description">
+        Beyond the technical aspects, completing Kitchen Chaos deepened my understanding of <span class="highlight">WebGL deployment</span>, as I successfully exported the game to run seamlessly on a GitHub-hosted site. Working with <span class="highlight">C#</span> also reinforced my grasp of object-oriented programming, particularly in managing game states and player interactions. By following this tutorial, I not only built a functional game but also showcased my capacity to absorb advanced concepts—like Unity’s physics engine and scripting API—in a short timeframe. This project underscores my commitment to continuous learning and adaptability, qualities I aim to bring to a professional software development role.
+    </div>
+
+    <!-- Unity WebGL Container -->
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
+        <div
