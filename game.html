@@ -3,44 +3,71 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | KitchenChaos</title>
+    <title>Unity WebGL Player | Kitchen Chaos</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica', 'Arial', sans-serif;
             text-align: center;
             margin: 0;
-            padding: 20px;
-            background-color: #1e3a5f;
+            padding: 40px;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
         .nav-bar {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            background-color: #1e3a5f;
+            padding: 15px;
+            border-radius: 8px;
         }
 
             .nav-bar a {
-                margin: 0 15px;
+                margin: 0 20px;
                 text-decoration: none;
-                color: #FFFFFF;
+                color: #ffffff;
                 font-size: 18px;
+                font-weight: 500;
             }
 
                 .nav-bar a:hover {
-                    color: #0078d4;
+                    color: #00aaff;
+                    transition: color 0.3s ease;
                 }
 
         .game-title {
-            font-size: 48px;
-            color: #FFFFFF;
-            margin-bottom: 10px;
+            font-size: 42px;
+            color: #1e3a5f;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .game-description {
             font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 20px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            color: #555;
         }
+
+        .learning-section {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.8;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .learning-section h2 {
+                font-size: 24px;
+                color: #1e3a5f;
+                margin-bottom: 15px;
+            }
 
         .linkedin-btn {
             margin-top: 20px;
@@ -50,17 +77,24 @@
                 width: 50px;
                 height: auto;
                 border: none;
+                transition: transform 0.3s ease;
             }
+
+                .linkedin-btn img:hover {
+                    transform: scale(1.1);
+                }
 
         #unity-container {
             width: 960px;
             height: 540px;
             margin: 0 auto;
-            background-color: #1e3a5f; /* Match body background */
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         #unity-canvas {
-            background-color: #1e3a5f; /* Ensure canvas matches */
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -68,111 +102,19 @@
     <!-- Navigation Links -->
     <div class="nav-bar">
         <a href="index.html">About</a>
-        <a href="game.html">Game</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="game.html">Kitchen Chaos</a>
+        <a href="dac.html">16-bit Precision DAC</a>
+        <a href="contact.html">Contact Me</a>
     </div>
 
     <!-- Title and Description -->
     <h1 class="game-title">Kitchen Chaos</h1>
     <p class="game-description">
-        Welcome to Kitchen Chaos! A frantic cooking game built in Unity. Test your skills and let me know what you think!
+        Welcome to Kitchen Chaos, a fast-paced cooking simulation game developed using Unity and hosted via WebGL. This project is a demonstration of my ability to quickly learn and apply new skills in software development, based on a detailed tutorial by Code Monkey on YouTube.
     </p>
 
-    <!-- Unity WebGL Container -->
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
-        </div>
-        <div id="unity-warning"></div>
-        <div id="unity-footer">
-            <div id="unity-webgl-logo"></div>
-            <div id="unity-fullscreen-button"></div>
-            <div id="unity-build-title">KitchenChaos</div>
-        </div>
-    </div>
-
-    <!-- LinkedIn Button -->
-    <div class="linkedin-btn">
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank">
-            <img src="linkedin-logo.png" alt="LinkedIn Profile">
-        </a>
-    </div>
-
-    <!-- Unity WebGL Script -->
-    <script>
-        var container = document.querySelector("#unity-container");
-        var canvas = document.querySelector("#unity-canvas");
-        var loadingBar = document.querySelector("#unity-loading-bar");
-        var progressBarFull = document.querySelector("#unity-progress-bar-full");
-        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-        var warningBanner = document.querySelector("#unity-warning");
-
-        function unityShowBanner(msg, type) {
-            function updateBannerVisibility() {
-                warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-            }
-            var div = document.createElement('div');
-            div.innerHTML = msg;
-            warningBanner.appendChild(div);
-            if (type == 'error') div.style = 'background: red; padding: 10px;';
-            else {
-                if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-                setTimeout(function () {
-                    warningBanner.removeChild(div);
-                    updateBannerVisibility();
-                }, 5000);
-            }
-            updateBannerVisibility();
-        }
-
-        var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/Kitchen-Chaos.loader.js";
-        var config = {
-            dataUrl: buildUrl + "/Kitchen-Chaos.data",
-            frameworkUrl: buildUrl + "/Kitchen-Chaos.framework.js",
-            codeUrl: buildUrl + "/Kitchen-Chaos.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "KitchenChaos",
-            productVersion: "0.1.0",
-            showBanner: unityShowBanner,
-        };
-
-        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            var meta = document.createElement('meta');
-            meta.name = 'viewport';
-            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-            document.getElementsByTagName('head')[0].appendChild(meta);
-            container.className = "unity-mobile";
-            canvas.className = "unity-mobile";
-        } else {
-            canvas.style.width = "960px";
-            canvas.style.height = "540px";
-        }
-
-        loadingBar.style.display = "block";
-
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-            createUnityInstance(canvas, config, (progress) => {
-                progressBarFull.style.width = 100 * progress + "%";
-            }).then((unityInstance) => {
-                loadingBar.style.display = "none";
-                fullscreenButton.onclick = () => {
-                    unityInstance.SetFullscreen(1);
-                };
-            }).catch((message) => {
-                alert(message);
-            });
-        };
-
-        document.body.appendChild(script);
-    </script>
-</body>
-</html>
+    <!-- Learning Section -->
+    <div class="learning-section">
+        <h2>What I Learned</h2>
+        <p>
+            This project, Kitchen Chaos, is not an original work but rather an implementation of a comprehensive tutorial by Code Monkey, which I followed to enhance my skills as part of my software development job search. Through this process, I gained hands-on experience with the Unity game engine and C# programming language, two powerful tools in modern game development. I learned to leverage Unity’s robust features, such as its scene management and component-based architecture, to build an interactive game environment. A key takeaway was mastering animations within Unity—using Animator components and state machines to bring characters and objects to life, ensuring smooth transitions and responsive gameplay. Additionally, I explored C# delegates, a concept that allowed me to implement flexible event-handling systems, making the game logic more modular and efficient. This experience underscored my ability to quickly adapt to new technologies and apply them effectively, a critical skill in
