@@ -89,7 +89,7 @@
     </div>
 
     <!-- Project Title -->
-    <h1 class="project-title">Software Optimization for a 16-bit DAC</h1>
+    <h1 class="project-title">Software Optimization of a 16-bit DAC</h1>
 
     <!-- Project Overview -->
     <div class="project-description">
@@ -99,13 +99,13 @@
     <!-- Oversampling Pipeline Section -->
     <h2 class="section-title">Oversampling Pipeline</h2>
     <div class="project-description">
-        One of my primary responsibilities was designing an oversampler to transition signals from a 250 kHz input to a 16 MHz binary output, a critical step for the DAC’s performance. I developed the <span class="highlight">oversampling_pipeline.sv</span> module to handle this clock domain crossing efficiently. Initially, the 16-bit multiplication and division operations caused resource bottlenecks. To address this, I implemented a <span class="highlight">pipelining strategy</span>, delaying the response by one clock cycle but significantly reducing resource usage. This optimization improved the DAC’s throughput and demonstrated my ability to balance trade-offs in real-time systems.
+        One of my primary responsibilities was designing an oversampler to transition signals from a 250 kHz input to a 16 MHz binary output, a critical step for the DAC’s performance. Initially, the 16-bit multiplication and division operations caused resource bottlenecks. To address this, I implemented a <span class="highlight">pipelining strategy</span>, delaying the response by one clock cycle but significantly reducing resource usage. This optimization improved the DAC’s throughput and demonstrated my ability to balance trade-offs in real-time systems.
     </div>
 
     <!-- Delta Sigma Modulation Section -->
     <h2 class="section-title">Delta Sigma Modulation</h2>
     <div class="project-description">
-        Another key contribution was implementing <span class="highlight">Delta Sigma Modulation</span> in the <span class="highlight">delta_sigma_single.sv</span> file. This module converted a 16-bit digital input into a high-frequency pulse density output of 1s and 0s, achieving an analog output (Thanks to our hardware team!) with precision down to 1/(2^16) between -3.3 and 3.3 volts. Mastering this complex signal processing technique required deep dives into modulation theory and SystemVerilog, showcasing my ability to learn and apply advanced concepts to meet stringent accuracy requirements.
+        Another key contribution was implementing <span class="highlight">Delta Sigma Modulation</span>. This module converted a 16-bit digital input into a high-frequency pulse density output of 1s and 0s (0 or 5 Volts), achieving an analog output (Thanks to our hardware team!) with precision down to microvolts between -3.3 and 3.3 volts. Mastering this complex signal processing technique required deep dives into modulation theory and SystemVerilog, showcasing my ability to learn and apply advanced concepts to meet stringent accuracy requirements.
     </div>
 
     <!-- NDA Notice -->
@@ -117,18 +117,19 @@
     <div class="project-separator"></div>
 
     <!-- Appended Kitchen Chaos Text Content -->
-    <h2 class="project-title">Game Development: Mastering Unity and C# through Expert Guidance</h2>
+    <h2 class="project-title">Unity and C# through Expert Guidance</h2>
     <div class="project-description">
         Kitchen Chaos is the product of <span class="highlight">Code Monkey</span>’s expert Unity tutorial, a well-known resource in the game development community. My role was not to innovate but to immerse myself in his proven methods, following along to build a functional game while absorbing professional techniques. This experience, completed in a short timeframe, reflects my dedication to learning from industry leaders—a mindset I bring to every challenge.
     </div>
+
+    <h2 class="section-title">C#</h2>
     <div class="project-description">
         Through this project, I deepened my <span class="highlight">C#</span> expertise, focusing on practices that resonate in software development. I implemented <span class="highlight">interfaces</span> and <span class="highlight">events</span> to craft modular, decoupled systems, ensuring logic and visuals remained independent for scalability. Using <span class="highlight">Scriptable Objects</span>, I optimized data management, while consistent <span class="highlight">refactoring</span> kept my code clean and maintainable. These skills—prioritizing efficiency, reusability, and quality—mirror the standards of professional software engineering.
     </div>
+
+    <h2 class="section-title">Unity</h2>
     <div class="project-description">
-        Adapting to <span class="highlight">Unity</span>, an entirely new environment beyond traditional coding, showcased my versatility. I mastered its ecosystem—building a <span class="highlight">character controller</span>, leveraging <span class="highlight">physics raycasts</span> for collision and object detection, and integrating the <span class="highlight">new input system</span> for responsive controls. Exploring <span class="highlight">Shader Graph</span> and <span class="highlight">object animations</span> further demonstrated my ability to blend technical precision with creative problem-solving. This rapid adaptation to a complex toolset highlights my potential to thrive in diverse software development roles.
-    </div>
-    <div class="linkedin-notice">
-        Want to see it in action? Check out my deployed game or reach out on LinkedIn to discuss how I can contribute to your team!
+        Adapting to <span class="highlight">Unity</span>, an entirely new environment for me beyond traditional coding, showcased my versatility. I mastered its ecosystem—building a <span class="highlight">character controller</span>, leveraging <span class="highlight">physics raycasts</span> for collision and object detection, and integrating the <span class="highlight">new input system</span> for responsive and versatile controls. Exploring <span class="highlight">Shader Graph</span> and <span class="highlight">object animations</span> further demonstrated my ability to blend technical precision with creative problem-solving. This rapid adaptation to a complex toolset highlights my potential to thrive in diverse software development roles.
     </div>
 
 </body>

@@ -2,14 +2,17 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>Contact</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Contact Me</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
-            background-color: #1e3a5f;
+            background-color: #1e3a5f; /* Dark blue background */
+            color: #ffffff; /* White text for contrast */
         }
 
         .nav-bar {
@@ -19,50 +22,65 @@
             .nav-bar a {
                 margin: 0 15px;
                 text-decoration: none;
-                color: #FFFFFF;
+                color: #ffffff;
                 font-size: 18px;
             }
 
                 .nav-bar a:hover {
-                    color: #0078d4;
+                    color: #66b3ff; /* Lighter blue on hover */
                 }
 
-        h1 {
+        .project-title {
             font-size: 48px;
-            color: #333;
+            color: #ffffff;
             margin-bottom: 20px;
         }
 
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
+        .section-title {
+            font-size: 28px;
+            color: #66b3ff; /* Lighter blue for section headers */
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
 
-        .example1 {
-            font-family: 'Times New Roman', serif;
-            font-size: 22px;
-            color: #FFFFFF;
-            line-height: 1.6;
-        }
-
-        .example2 {
-            font-family: 'Helvetica', sans-serif;
+        .project-description {
             font-size: 18px;
-            color: #FFFFFF;
-            background-color: #333;
-            padding: 15px;
-            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6; /* Improved readability */
         }
 
-        .example3 {
-            font-family: 'Trebuchet MS', sans-serif;
-            font-size: 20px;
-            color: #FFFFFF;
-            text-shadow: 1px 1px 2px #ccc;
+        .highlight {
+            background-color: #2a4d7a; /* Slightly lighter blue for emphasis */
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .nda-notice {
+            font-size: 16px;
+            color: #cccccc; /* Grayish for less emphasis */
+            margin-top: 30px;
+        }
+
+        .linkedin-notice {
+            font-size: 16px;
+            color: #cccccc; /* Grayish for less emphasis */
+            margin-top: 30px;
+        }
+
+        /* Separator Styling */
+        .project-separator {
+            width: 50%;
+            max-width: 400px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #66b3ff, transparent); /* Gradient fade effect */
+            margin: 40px auto; /* Centered with spacing above and below */
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Links -->
     <div class="nav-bar">
         <a href="index.html">About</a>
         <a href="projects.html">Projects</a>
@@ -70,17 +88,33 @@
         <a href="contact.html">Contact Me</a>
     </div>
 
-    <h1>Contact</h1>
-    <div class="content">
-        <p class="example1">
-            Want to chat? Reach out via email at yourname@example.com or connect with me on social media. Edit this with your details!
-        </p>
-        <p class="example2">
-            I�m open to collaboration or feedback. Drop me a line�I�d love to hear from you!
-        </p>
-        <p class="example3">
-            For quick questions, find me on Twitter @yourhandle or check my LinkedIn below. Customize this however you like!
-        </p>
+    <!-- Contact Title -->
+    <h1 class="project-title">Contact Me</h1>
+
+    <!-- Contact Introduction -->
+    <div class="project-description">
+        I’d love to hear from you! Whether you have questions about my projects, want to discuss potential opportunities, or just want to connect, feel free to reach out using the methods below.
     </div>
+
+    <!-- Email Section -->
+    <h2 class="section-title">Email</h2>
+    <div class="project-description">
+        You can contact me directly at <span class="highlight"><a href="mailto:your.email@example.com" style="color: #ffffff; text-decoration: none;">your.email@example.com</a></span>. I typically respond within 24-48 hours.
+    </div>
+
+    <!-- LinkedIn Section -->
+    <h2 class="section-title">LinkedIn</h2>
+    <div class="project-description">
+        Let’s connect on <span class="highlight"><a href="https://www.linkedin.com/in/yourprofile" target="_blank" style="color: #ffffff; text-decoration: none;">LinkedIn</a></span>! Feel free to send me a message or connection request—I’m always open to networking and discussing tech, projects, or career opportunities.
+    </div>
+
+    <!-- Closing Note -->
+    <div class="linkedin-notice">
+        Looking forward to chatting with you soon!
+    </div>
+
+    <!-- Separator -->
+    <div class="project-separator"></div>
+
 </body>
 </html>
